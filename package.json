@@ -1,9 +1,10 @@
 {
-    "name": "@clean/core",
+    "name": "@clean-arch/core",
     "version": "1.0.0",
     "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "repository": {"type": "git", "url": "https://github.com/clean-arch/core.git"},
     "author": {"name": "Teles Dourado", "email": "dev@telesdourado.com"},
     "scripts": {
       "prepublish": "tsc",
