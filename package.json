@@ -1,11 +1,13 @@
 {
-    "name": "core",
+    "name": "@clean/core",
     "version": "1.0.0",
     "license": "MIT",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "author": {"name": "Teles Dourado", "email": "dev@telesdourado.com"},
     "scripts": {
-      "dev": "tsnd --respawn --transpile-only ./src",
-      "test": "jest test"
+      "prepublish": "tsc",
+      "build":"tsc"
     },
     "devDependencies": {
       "@types/express": "^4.17.13",
