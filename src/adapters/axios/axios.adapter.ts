@@ -5,7 +5,7 @@ import {
   HttpClientMethods,
 } from "../../interfaces/http-client.interface";
 
-import * as httpStatusCode from "./http-status-code";
+import * as httpStatusCode from "../../global/http/http-status-code.global";
 
 export class AxiosAdapter implements HttpClient {
   private generalOptions = {} as HttpClientBuild;
