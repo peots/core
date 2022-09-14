@@ -1,13 +1,13 @@
 import axios, { AxiosError } from "axios";
 import {
-  HttpClient,
+  HttpClientApp,
   HttpClientBuild,
   HttpClientMethods,
 } from "../../interfaces/http-client.interface";
 
 import * as httpStatusCode from "../../global/http/http-status-code.global";
 
-export class AxiosAdapter implements HttpClient {
+export class AxiosAdapter implements HttpClientApp {
   private generalOptions = {} as HttpClientBuild;
 
   get() {

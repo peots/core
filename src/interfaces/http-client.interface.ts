@@ -16,7 +16,7 @@ export abstract class HttpClientBuild {
 
 export type HttpClientResponse<T = any> = T;
 
-export abstract class HttpClient {
+export abstract class HttpClientApp {
   get: () => this;
   post: () => this;
   put: () => this;
