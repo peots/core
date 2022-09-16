@@ -20,7 +20,7 @@ export class TcpRouteService {
     }
   }
 
-  set(tcpRouteItem: TcpRouteItem) {
+  static set(tcpRouteItem: TcpRouteItem) {
     Register.sync.set(
       Object.assign(Register.get("tcp-routes") || {}, tcpRouteItem),
       "tcp-routes"
