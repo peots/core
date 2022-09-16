@@ -4,7 +4,7 @@ import {
   HttpRequest,
   HttpResponse,
   Route,
-} from "../../interfaces/http-application.interface";
+} from "../../contracts/http-application.contract";
 
 export class ExpressAdapter implements HttpApp {
   private _app: express.Express;

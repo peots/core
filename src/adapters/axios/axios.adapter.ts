@@ -3,7 +3,7 @@ import {
   HttpClientApp,
   HttpClientBuild,
   HttpClientMethods,
-} from "../../interfaces/http-client.interface";
+} from "../../contracts/http-client.contract";
 
 import * as httpStatusCode from "../../global/http/http-status-code.global";
 
