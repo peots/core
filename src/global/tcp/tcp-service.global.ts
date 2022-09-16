@@ -20,9 +20,9 @@ export class TcpRouteService {
     }
   }
 
-  static set(tcpRouteItem: TcpRouteItem) {
+  static set(tcpRoute: TcpRoute) {
     Register.sync.set(
-      Object.assign(Register.get("tcp-routes") || {}, tcpRouteItem),
+      Object.assign(Register.get("tcp-routes") || {}, tcpRoute),
       "tcp-routes"
     );
   }
