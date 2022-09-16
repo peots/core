@@ -7,6 +7,8 @@ import {
 } from "../../contracts/tcp-application.contract";
 import { TcpRouteService } from "../../global/tcp/tcp-service.global";
 
+import crypto from "crypto";
+
 export class TcpAdapter implements TcpApp {
   private readonly _server = net.createServer();
 
