@@ -11,7 +11,7 @@ export type TcpSocket = (sock: TcpSockActions) => Promise<void>;
 
 export abstract class TcpApp {
   listen: (port: number) => this;
-  server?: (sock: TcpSockActions) => Promise<void>;
+  server?: TcpSocket;
   connect: (externalSock?: TcpSocket) => void;
 }
 

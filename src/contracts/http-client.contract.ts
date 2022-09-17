@@ -10,7 +10,7 @@ export abstract class HttpClientBuild {
   url: string;
   options: HttpClientOptions;
   method: HttpClientMethods;
-  body: Record<string, any>;
+  body: Record<string, any> | string;
   [key: string]: any;
 }
 
@@ -23,7 +23,7 @@ export abstract class HttpClientApp {
   patch: () => this;
   delete?: () => this;
   url: (value: string) => this;
-  body: (data: Record<string, any>) => this;
+  body: (data: Record<string, any> | string) => this;
   headers: (data: Record<string, string>) => this;
   build: () => Promise<HttpClientResponse>;
 }

@@ -3,7 +3,7 @@ export class HttpContinueCode {
   static statusMessage: string = "Continue";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -21,7 +21,7 @@ export class HttpSwitchingProtocolsCode {
   static statusMessage: string = "Switching Protocols";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -39,7 +39,7 @@ export class HttpProcessingCode {
   static statusMessage: string = "Processing";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -57,7 +57,7 @@ export class HttpOKCode {
   static statusMessage: string = "OK";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -75,7 +75,7 @@ export class HttpCreatedCode {
   static statusMessage: string = "Created";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -93,7 +93,7 @@ export class HttpAcceptedCode {
   static statusMessage: string = "Accepted";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -111,7 +111,7 @@ export class HttpNonAuthoritativeInformationCode {
   static statusMessage: string = "Non Authoritative Information";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -129,7 +129,7 @@ export class HttpNoContentCode {
   static statusMessage: string = "No Content";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -147,7 +147,7 @@ export class HttpResetContentCode {
   static statusMessage: string = "Reset Content";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -165,7 +165,7 @@ export class HttpPartialContentCode {
   static statusMessage: string = "Partial Content";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -183,7 +183,7 @@ export class HttpMultiStatusCode {
   static statusMessage: string = "Multi Status";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -201,7 +201,7 @@ export class HttpAlreadyReportedCode {
   static statusMessage: string = "Already Reported";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -219,7 +219,7 @@ export class HttpIMUsedCode {
   static statusMessage: string = "IM Used";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -237,7 +237,7 @@ export class HttpMultipleChoicesCode extends Error {
   static statusMessage: string = "Multiple Choices";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -257,7 +257,7 @@ export class HttpMovedPermanentlyCode extends Error {
   static statusMessage: string = "Moved Permanently";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -277,7 +277,7 @@ export class HttpFoundCode extends Error {
   static statusMessage: string = "Found";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -297,7 +297,7 @@ export class HttpSeeOtherCode extends Error {
   static statusMessage: string = "See Other";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -317,7 +317,7 @@ export class HttpNotModifiedCode extends Error {
   static statusMessage: string = "Not Modified";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -337,7 +337,7 @@ export class HttpUseProxyCode extends Error {
   static statusMessage: string = "Use Proxy";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -357,7 +357,7 @@ export class HttpTemporaryRedirectCode extends Error {
   static statusMessage: string = "Temporary Redirect";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -377,7 +377,7 @@ export class HttpPermanentRedirectCode extends Error {
   static statusMessage: string = "Permanent Redirect";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -397,7 +397,7 @@ export class HttpBadRequestCode extends Error {
   static statusMessage: string = "Bad Request";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -417,7 +417,7 @@ export class HttpUnauthorizedCode extends Error {
   static statusMessage: string = "Unauthorized";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -437,7 +437,7 @@ export class HttpPaymentRequiredCode extends Error {
   static statusMessage: string = "Payment Required";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -457,7 +457,7 @@ export class HttpForbiddenCode extends Error {
   static statusMessage: string = "Forbidden";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -477,7 +477,7 @@ export class HttpNotFoundCode extends Error {
   static statusMessage: string = "Not Found";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -497,7 +497,7 @@ export class HttpMethodNotAllowedCode extends Error {
   static statusMessage: string = "Method Not Allowed";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -517,7 +517,7 @@ export class HttpNotAcceptableCode extends Error {
   static statusMessage: string = "Not Acceptable";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -537,7 +537,7 @@ export class HttpProxyAuthenticationRequiredCode extends Error {
   static statusMessage: string = "Proxy Authentication Required";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -557,7 +557,7 @@ export class HttpRequestTimeoutCode extends Error {
   static statusMessage: string = "Request Timeout";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -577,7 +577,7 @@ export class HttpConflictCode extends Error {
   static statusMessage: string = "Conflict";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -597,7 +597,7 @@ export class HttpGoneCode extends Error {
   static statusMessage: string = "Gone";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -617,7 +617,7 @@ export class HttpLengthRequiredCode extends Error {
   static statusMessage: string = "Length Required";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -637,7 +637,7 @@ export class HttpPreconditionFailedCode extends Error {
   static statusMessage: string = "Precondition Failed";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -657,7 +657,7 @@ export class HttpRequestEntityTooLargeCode extends Error {
   static statusMessage: string = "Request Entity Too Large";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -677,7 +677,7 @@ export class HttpRequestURITooLongCode extends Error {
   static statusMessage: string = "Request URI Too Long";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -697,7 +697,7 @@ export class HttpUnsupportedMediaTypeCode extends Error {
   static statusMessage: string = "Unsupported Media Type";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -717,7 +717,7 @@ export class HttpRequestedRangeNotSatisfiableCode extends Error {
   static statusMessage: string = "Requested Range Not Satisfiable";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -737,7 +737,7 @@ export class HttpExpectationFailedCode extends Error {
   static statusMessage: string = "Expectation Failed";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -757,7 +757,7 @@ export class HttpImAteapotCode extends Error {
   static statusMessage: string = "Im A teapot";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -777,7 +777,7 @@ export class HttpEnhanceYourCalmCode extends Error {
   static statusMessage: string = "Enhance Your Calm";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -797,7 +797,7 @@ export class HttpUnprocessableEntityCode extends Error {
   static statusMessage: string = "Unprocessable Entity";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -817,7 +817,7 @@ export class HttpLockedCode extends Error {
   static statusMessage: string = "Locked";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -837,7 +837,7 @@ export class HttpFailedDependencyCode extends Error {
   static statusMessage: string = "Failed Dependency";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -857,7 +857,7 @@ export class HttpReservedForWebDAVCode extends Error {
   static statusMessage: string = "Reserved For WebDAV";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -877,7 +877,7 @@ export class HttpUpgradeRequiredCode extends Error {
   static statusMessage: string = "Upgrade Required";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -897,7 +897,7 @@ export class HttpPreconditionRequiredCode extends Error {
   static statusMessage: string = "Precondition Required";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -917,7 +917,7 @@ export class HttpTooManyRequestsCode extends Error {
   static statusMessage: string = "Too Many Requests";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -937,7 +937,7 @@ export class HttpRequestHeaderFieldsTooLargeCode extends Error {
   static statusMessage: string = "Request Header Fields Too Large";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -957,7 +957,7 @@ export class HttpNoResponseCode extends Error {
   static statusMessage: string = "No Response";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -977,7 +977,7 @@ export class HttpRetryWithCode extends Error {
   static statusMessage: string = "Retry With";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -997,7 +997,7 @@ export class HttpBlockedByWindowsParentalControlsCode extends Error {
   static statusMessage: string = "Blocked By Windows Parental Controls";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1017,7 +1017,7 @@ export class HttpUnavailableForLegalReasonsCode extends Error {
   static statusMessage: string = "Unavailable For Legal Reasons";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1037,7 +1037,7 @@ export class HttpClientClosedRequestCode extends Error {
   static statusMessage: string = "Client Closed Request";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1057,7 +1057,7 @@ export class HttpInternalServerErrorCode extends Error {
   static statusMessage: string = "Internal Server Error";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1077,7 +1077,7 @@ export class HttpNotImplementedCode extends Error {
   static statusMessage: string = "Not Implemented";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1097,7 +1097,7 @@ export class HttpBadGatewayCode extends Error {
   static statusMessage: string = "Bad Gateway";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1117,7 +1117,7 @@ export class HttpServiceUnavailableCode extends Error {
   static statusMessage: string = "Service Unavailable";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1137,7 +1137,7 @@ export class HttpGatewayTimeoutCode extends Error {
   static statusMessage: string = "Gateway Timeout";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1157,7 +1157,7 @@ export class HttpHTTPVersionNotSupportedCode extends Error {
   static statusMessage: string = "HTTP Version Not Supported";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1177,7 +1177,7 @@ export class HttpVariantAlsoNegotiatesCode extends Error {
   static statusMessage: string = "Variant Also Negotiates";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1197,7 +1197,7 @@ export class HttpInsufficientStorageCode extends Error {
   static statusMessage: string = "Insufficient Storage";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1217,7 +1217,7 @@ export class HttpLoopDetectedCode extends Error {
   static statusMessage: string = "Loop Detected";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1237,7 +1237,7 @@ export class HttpBandwidthLimitExceededCode extends Error {
   static statusMessage: string = "Bandwidth Limit Exceeded";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1257,7 +1257,7 @@ export class HttpNotExtendedCode extends Error {
   static statusMessage: string = "Not Extended";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1277,7 +1277,7 @@ export class HttpNetworkAuthenticationRequiredCode extends Error {
   static statusMessage: string = "Network Authentication Required";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1297,7 +1297,7 @@ export class HttpNetworkReadTimeoutCode extends Error {
   static statusMessage: string = "Network Read Timeout";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>
@@ -1317,7 +1317,7 @@ export class HttpNetworkConnectTimeoutCode extends Error {
   static statusMessage: string = "Network Connect Timeout";
 
   constructor(
-    public requestData: Record<string, any>,
+    public requestData: Record<string, any> | string,
     public responseData: Record<string, any>,
     public requestHeaders: Record<string, string>,
     public responseHeaders: Record<string, string>

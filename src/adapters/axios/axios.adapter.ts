@@ -44,7 +44,7 @@ export class AxiosAdapter implements HttpClientApp {
     return this;
   }
 
-  body(data: Record<string, any>) {
+  body(data: Record<string, any> | string) {
     this.generalOptions.body = data;
     return this;
   }
@@ -92,11 +92,3 @@ export class AxiosAdapter implements HttpClientApp {
     return this.callHttpMethod();
   }
 }
-
-(async () => {
-  const { responseData } = await new AxiosAdapter()
-    .post()
-    .body({ ok: true })
-    .url("https://my-json-server.typicode.com/typicode/demo/posts")
-    .build();
-})();
