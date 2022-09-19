@@ -4,6 +4,7 @@ import {
   HttpClientBuild,
   HttpClientMethods,
 } from "../../contracts/http-client.contract";
+import { HttpStatusResponse } from "../../global/contracts/http-status.contract";
 
 import * as httpStatusCode from "../../global/http/http-status-code.global";
 
@@ -88,7 +89,7 @@ export class AxiosAdapter implements HttpClientApp {
     }
   }
 
-  async build() {
-    return this.callHttpMethod();
+  async build<T = Record<string, any>>() {
+    return this.callHttpMethod() as Promise<HttpStatusResponse<T>>;
   }
 }
