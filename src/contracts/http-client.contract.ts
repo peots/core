@@ -14,7 +14,12 @@ export abstract class HttpClientBuild {
   [key: string]: any;
 }
 
-export type HttpClientResponse<T = any> = T;
+export interface HttpClientResponse<T> {
+  requestData: Record<string, any> | string;
+  responseData: T;
+  requestHeaders: Record<string, string>;
+  responseHeaders: Record<string, string>;
+}
 
 export abstract class HttpClientApp {
   get: () => this;
@@ -25,5 +30,5 @@ export abstract class HttpClientApp {
   url: (value: string) => this;
   body: (data: Record<string, any> | string) => this;
   headers: (data: Record<string, string>) => this;
-  build: () => Promise<HttpClientResponse>;
+  build: <T = Record<string, any>>() => Promise<HttpClientResponse<T>>;
 }

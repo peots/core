@@ -3,8 +3,8 @@ import {
   HttpClientApp,
   HttpClientBuild,
   HttpClientMethods,
+  HttpClientResponse,
 } from "../../contracts/http-client.contract";
-import { HttpStatusResponse } from "../../global/contracts/http-status.contract";
 
 import * as httpStatusCode from "../../global/http/http-status-code.global";
 
@@ -56,7 +56,7 @@ export class AxiosAdapter implements HttpClientApp {
     );
   }
 
-  private async callHttpMethod() {
+  private async callHttpMethod<T>() {
     const { method, url, options, body } = this.generalOptions;
 
     let headers: Record<string, string> = {};
@@ -72,7 +72,12 @@ export class AxiosAdapter implements HttpClientApp {
 
       const HttpResponseClass = this.getHttpResponseClass(status);
 
-      return new HttpResponseClass(body, data, headers, request.res.headers);
+      return new HttpResponseClass(
+        body,
+        data,
+        headers,
+        request.res.headers
+      ) as HttpClientResponse<T>;
     } catch (error) {
       if (error instanceof AxiosError) {
         const HttpResponseClass = this.getHttpResponseClass(
@@ -89,7 +94,7 @@ export class AxiosAdapter implements HttpClientApp {
     }
   }
 
-  async build<T = Record<string, any>>() {
-    return this.callHttpMethod() as Promise<HttpStatusResponse<T>>;
+  async build<T>() {
+    return this.callHttpMethod<T>();
   }
 }
