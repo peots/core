@@ -11,7 +11,7 @@ export class TcpRouteService {
 
     try {
       for (const mdw of middleware) {
-        await mdw(sock, data);
+        await mdw(sock, topic, data);
       }
       return { service };
     } catch (error) {

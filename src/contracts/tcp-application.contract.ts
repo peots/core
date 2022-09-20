@@ -16,7 +16,8 @@ export abstract class TcpApp {
 }
 
 export type MiddlewareFunction = (
-  sock?: TcpSockActions,
+  sock: TcpSockActions,
+  topic?: string,
   data?: unknown
 ) => Promise<void>;
 
