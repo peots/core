@@ -2,6 +2,7 @@ import { Service } from "../global/contracts/service.contract";
 
 export type TcpSockActions = {
   on: (pattern: string, fn: (...args: any[]) => void) => void;
+  json: (data: Record<string, any>) => void;
   write: (data: string) => void;
   end: () => void;
   id?: string;

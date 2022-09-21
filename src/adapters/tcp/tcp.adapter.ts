@@ -22,6 +22,10 @@ export class TcpAdapter implements TcpApp {
 
   async server(sock: TcpSockActions) {
     sock.id = crypto.randomUUID();
+
+    sock.json = (object: Record<string, any>) =>
+      sock.write(JSON.stringify(object));
+
     Register.unique.set(sock);
 
     console.log(
@@ -35,7 +39,7 @@ export class TcpAdapter implements TcpApp {
 
         if (service) {
           const response = await service.exec(data, sock);
-          if (response) sock.write(JSON.stringify(response));
+          if (response && typeof response == "object") sock.json(response);
         }
       } catch (error) {
         console.error(error);

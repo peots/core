@@ -15,7 +15,7 @@ export class TcpRouteService {
       }
       return { service };
     } catch (error) {
-      sock.write(JSON.stringify({ error: `fail trying to get service.` }));
+      sock.json({ error: `fail trying to get service.` });
       return { error };
     }
   }
